@@ -42,7 +42,7 @@ class DaasTestCase(unittest.TestCase):
 
   def test_fuk(self):
     rv = self.app.get('/fuk/foo/bar')
-    asser 'fuk u foo' and 'from bar' in rv.data
+    assert 'fuk u foo' and 'from bar' in rv.data
 
 
 if __name__ == '__main__': unittest.main()
