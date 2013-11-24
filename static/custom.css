@@ -6,6 +6,25 @@ body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
+h1, .jumbotron h1 {
+  color: #04ec04;
+}
+
+h2 {
+  color: #00bff3;
+}
+
+h3, .jumbotron h3 {
+  color: #ff0000;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
 footer {
   font-size: .8em;
   width: 100%;
