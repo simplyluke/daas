@@ -2,9 +2,10 @@ import os
 import unittest
 import app
 
+# such unit testing
 class DaasTestCase(unittest.TestCase):
 
-  # Such unit testing 
+  # much code coverage
   def setUp(self):
     self.app = app.app.test_client()
 

@@ -1,3 +1,19 @@
+body {
+  font-size: 1.9em;
+}
+
 body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+footer {
+  font-size: .8em;
+  width: 100%;
+  border-top: solid 1px gray;
+  color: gray;
+  text-align: center;
+}
+
+.jumbotron {
+  text-align: center;
 }
