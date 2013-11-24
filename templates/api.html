@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ content.title }}{% endblock %}
+{% block content %}
+  <div class="jumbotron">
+    <h1>{{ content.main }}</h1>
+    {% if content.optional %}
+    <h3>- from {{ content.optional }}</h3>
+     {% endif %}
+  </div>
+{% endblock %}
