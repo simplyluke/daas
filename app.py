@@ -59,7 +59,7 @@ def show_thx(to, sender):
 def show_fuk(to, sender):
   main = 'fuk u %s' % to
   content = {'title': 'fuk u', 'main': main, 'optional': sender }
-  return orender_template('api.html', content=content)
+  return render_template('api.html', content=content)
 
 if __name__ == '__main__':
   app.run()
