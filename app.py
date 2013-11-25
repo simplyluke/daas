@@ -67,8 +67,8 @@ def show_thx(to, sender):
 @app.route('/fuk/<to>/<sender>')
 def show_fuk(to, sender):
   main = 'fuk u %s' % to
-  content={'title': 'fuk u', 'main': main, 'optional': sender }
+  content = {'title': 'fuk u', 'main': main, 'optional': sender }
   return output(request, content) 
 
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run()
