@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% block title %}{% endblock %}</title>
+    <title>Doge as a Service</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Doge as a Service">
     <meta name="author" content="Luke Wright">
@@ -14,15 +14,8 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="container">
-      {% block content %}{% endblock %}
-    </div>
-    <div class="container">
-      <footer>
-        Doge as a Service - &copy; <a href="http://simplyluke.com/" target="_blank">Luke Wright 2013</a>
-      </footer>
-    </div>
+  <body {% block bodyclass %}{% endblock %}>
+    {% block content %}{% endblock %}
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
   </body>

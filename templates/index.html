@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% block title %}{{ title }}{% endblock %}
 {% block content %}
+<div class="container">
   <div class="jumbotron">
     <h1>Doge as a Service</h1>
     <h3>v0.1</h3>
@@ -10,8 +10,10 @@
   <h2>Content</h2>
   <h3>text/html</h3>
   <p>very HTML page many bootstrap jumbotron wow</p>
-  <h3>COMING SOON: application/json</h3>
+  <h3>application/json</h3>
   <p>many colon wow such json</p>
+  <h3>text/plain</h3>
+  <p>very basic such simplicity</p>
   <h1>Such API</h1>
   <h3>/wow/:word</h3>
   <p>plz return 'wow such :word.'</p>
@@ -27,4 +29,8 @@
   <p>plz return 'omg such :word. wow.'</p>
   <h3>/thx/:to/:from</h3>
   <p>plz return 'thx :to - from :from'</p>
+</div>
+<footer>
+Doge as a Service - &copy; <a href="http://simplyluke.com/" target="_blank">Luke Wright 2013</a>
+</footer>
 {% endblock %}

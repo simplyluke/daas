@@ -4,14 +4,15 @@ import app
 
 # such unit testing
 class DaasTestCase(unittest.TestCase):
-
+  
   # much code coverage
   def setUp(self):
     self.app = app.app.test_client()
 
+  # Individual api function tests
   def test_index(self):
     rv = self.app.get('/')
-    assert 'Doge As A Service' in rv.data
+    assert 'Doge as a Service' in rv.data
 
   def test_wow(self):
     rv = self.app.get('/wow/foobar')
