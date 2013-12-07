@@ -46,9 +46,17 @@ class DaasTestCase(unittest.TestCase):
     rv = self.app.get('/thx/foo/bar')
     assert 'thx foo' and 'from bar' in rv.data
 
+  def test_anon_thx(self):
+    rv = self.app.get('/thx/foo')
+    assert 'thx foo' in rv.data
+
   def test_fuk(self):
     rv = self.app.get('/fuk/foo/bar')
     assert 'fuk u foo' and 'from bar' in rv.data
+
+  def test_anon_fuk(self):
+    rv = self.app.get('/fuk/foo')
+    assert 'fuk u foo' in rv.data
 
 
 if __name__ == '__main__': unittest.main()

@@ -123,6 +123,19 @@ def show_thx(to, sender):
   if request.method == 'GET':
     return content
 
+@app.route('/thx/<to>')
+@mimerender (
+  default = 'html',
+  html = render_html,
+  json = render_json,
+  txt = render_txt
+)
+def show_anon_thx(to):
+  main = 'thx %s' % to
+  content={'main': main}
+  if request.method == 'GET':
+    return content
+
 @app.route('/fuk/<to>/<sender>')
 @mimerender (
   default = 'html',
@@ -133,6 +146,19 @@ def show_thx(to, sender):
 def show_fuk(to, sender):
   main = 'fuk u %s' % to
   content = {'main': main, 'optional': sender }
+  if request.method == 'GET':
+    return content
+
+@app.route('/fuk/<to>')
+@mimerender (
+  default = 'html',
+  html = render_html,
+  json = render_json,
+  txt = render_txt
+)
+def show_anon_fuk(to):
+  main = 'fuk u %s' % to
+  content = {'main': main} 
   if request.method == 'GET':
     return content
 
