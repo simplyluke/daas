@@ -97,6 +97,19 @@ def show_plz(to, sender):
   if request.method == 'GET':
     return content
 
+@app.route('/plz/<to>')
+@mimerender(
+    default = 'html',
+    html = render_html,
+    json = render_json,
+    txt = render_txt
+)
+def show_plz_no_sender(to):
+    main = "%s plz" % to
+    content = {'main': main}
+    if request.method == 'GET':
+        return content
+
 @app.route('/thx/<to>/<sender>')
 @mimerender (
   default = 'html',
