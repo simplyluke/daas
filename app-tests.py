@@ -26,6 +26,10 @@ class DaasTestCase(unittest.TestCase):
     rv = self.app.get('/plz/foo/bar')
     assert 'foo plz' and 'from bar' in rv.data
 
+  def test_anon_plz(self):
+    rv = self.app.get('/plz/foo')
+    assert 'foo plz' in rv.data
+
   def test_little(self):
     rv = self.app.get('/little/foo')
     assert 'little foo. wow' in rv.data
